@@ -1,0 +1,11 @@
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        // THIS IS THE BASE CASE
+        if(root == NULL) return 0;
+        int d1 = maxDepth(root -> left); // LEFT RECURSIVE CALL
+        int d2= maxDepth(root -> right); // RIGHT RECURSIVE CALL
+
+       return max(d1,d2)+1;
+    }
+};
